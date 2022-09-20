@@ -9,10 +9,6 @@
     <script src="mapMaker.js"></script>
     <title>LaGeo</title>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-         -->
     <link rel="stylesheet" href="leaflet/leaflet.css" />
     <script src="leaflet/leaflet.js"></script>
 </head>
@@ -21,26 +17,6 @@
     <img src="cover.png" alt="logo">
     <div id="prj">
      <div id="map" style="height:100%"></div>
-    <!-- <script src="OpenLayers.js"></script>
-    <script>
-        var lat = 32.992291;
-        var lon = 53.564567;
-        var zoom = 6;
-
-        var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
-        var toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
-        var position = new OpenLayers.LonLat(lon, lat).transform(fromProjection, toProjection);
-
-        map = new OpenLayers.Map("Map");
-        var mapnik = new OpenLayers.Layer.OSM();
-        map.addLayer(mapnik);
-
-        var markers = new OpenLayers.Layer.Markers("Markers");
-        map.addLayer(markers);
-        markers.addMarker(new OpenLayers.Marker(position));
-
-        map.setCenter(position, zoom);
-    </script> -->
     </div>
     <script>
         let prj = document.getElementById("prj");
@@ -49,7 +25,7 @@
 
     </script>
     <script>
-        var map = L.map('map').setView([51.505, -0.09], 13); 
+        var map = L.map('map').setView([32.307767, 53.520305], 6); 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
                 maxZoom: 19,
                 attribution: '© OpenStreetMap'
