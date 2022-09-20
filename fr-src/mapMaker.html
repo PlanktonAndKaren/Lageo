@@ -9,19 +9,19 @@
     <script src="mapMaker.js"></script>
     <title>LaGeo</title>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
         integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        
+         -->
     <link rel="stylesheet" href="leaflet/leaflet.css" />
-    <script src="/path/to/leaflet.js"></script>
+    <script src="leaflet/leaflet.js"></script>
 </head>
 
 <body>
     <img src="cover.png" alt="logo">
     <div id="prj">
-     <div id="Map" style="height:100%"></div>
-    <script src="OpenLayers.js"></script>
+     <div id="map" style="height:100%"></div>
+    <!-- <script src="OpenLayers.js"></script>
     <script>
         var lat = 32.992291;
         var lon = 53.564567;
@@ -40,14 +40,21 @@
         markers.addMarker(new OpenLayers.Marker(position));
 
         map.setCenter(position, zoom);
-    </script>
+    </script> -->
     </div>
-    <script>
+    <!-- <script>
         let prj = document.getElementById("prj");
         let width = prj.offsetWidth;
         // let hval = `${height * 0.88}px`
         prj.style.height = width;
 
+    </script> -->
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13); 
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
     </script>
 
     <!--#####################################################  Projector   -->
